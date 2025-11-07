@@ -14,3 +14,12 @@ peso = st.slider("Peso (kg)", 0, 220, 70)
 edad = st.slider("Edad", 0, 100, 30)
 
 genero = st.radio("Género", ["Masculino", "Femenino", "Otro"])
+
+#calclulo dle IMC
+if st.button("Calcular IMC"):
+    # Cálculo del IMC
+    altura_m = altura / 100
+    imc = peso / (altura_m ** 2)
+    
+    # Mostrar resultado
+    st.subheader(f"Tu IMC: {imc:.1f}")
