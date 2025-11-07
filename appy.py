@@ -181,13 +181,13 @@ if st.button("Calcular Mi Peso Ideal", type="primary", use_container_width=True)
 
     if peso_ideal_min <= peso <= peso_ideal_max:
         st.balloons()
-        st.success("✅ **¡Perfecto! Estás dentro de tu rango de peso ideal**")
+        st.success(" **¡Perfecto! Estás dentro de tu rango de peso ideal**")
     elif peso < peso_ideal_min:
         diferencia = peso_ideal_min - peso
-        st.warning(f"📈 **Recomendación:** Aumenta {diferencia:.1f} kg para llegar al mínimo ideal")
+        st.warning(f" **Recomendación:** Aumenta {diferencia:.1f} kg para llegar al mínimo ideal")
     else:
         diferencia = peso - peso_ideal_max
-        st.warning(f"📉 **Recomendación:** Reduce {diferencia:.1f} kg para llegar al máximo ideal")
+        st.warning(f" **Recomendación:** Reduce {diferencia:.1f} kg para llegar al máximo ideal")
 
 # Recomendaciones de alimentos por categoría
 st.subheader("🥗 Alimentos recomendados")
