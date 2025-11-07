@@ -75,27 +75,25 @@ if st.button("Calcular IMC"):
 
 
 # Cálculo de peso ideal
-st.subheader("Calculadora de Peso Ideal")
+st.subheader("🎯 Tu peso ideal según altura")
 
-# SOLUCIÓN: Todo dentro del mismo botón
-if st.button("Calcular Mi Peso Ideal"):
-    
-    if genero == "Masculino":
-        peso_ideal = 0.75 * altura - 62.5
-    else:
-        peso_ideal = 0.675 * altura - 56.25
+if genero == "Masculino":
+    peso_ideal_min = 20 * (altura/100)**2
+    peso_ideal_max = 25 * (altura/100)**2
+else:
+    peso_ideal_min = 19 * (altura/100)**2  
+    peso_ideal_max = 24 * (altura/100)**2
 
-    st.success(f"**¡Tu peso ideal es:** {peso_ideal:.1f} kg")
-    
-    # Cálculo de diferencia
-    diferencia = peso - peso_ideal
-    
-    # Mostrar comparación
-    col1, col2 = st.columns(2)
-    with col1:
-        st.metric("Peso Actual", f"{peso} kg")
-    with col2:
-        st.metric("Peso Ideal", f"{peso_ideal:.1f} kg")
+st.write(f"**Rango de peso ideal para tu altura:**")
+st.info(f"Entre **{peso_ideal_min:.1f}kg** y **{peso_ideal_max:.1f}kg**")
+
+diferencia = peso - peso_ideal_max
+if peso > peso_ideal_max:
+    st.warning(f"Te encuentras {diferencia:.1f}kg por encima de tu peso ideal")
+elif peso < peso_ideal_min:
+    st.warning(f"Te encuentras {abs(diferencia):.1f}kg por debajo de tu peso ideal")
+else:
+    st.success("¡Estás en tu peso ideal!")
     
     # Mostrar globos solo si está en peso ideal exacto
     if diferencia == 0:
