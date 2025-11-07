@@ -13,6 +13,15 @@ altura = st.slider("Altura (cm)", 0, 220, 170)
 peso = st.slider("Peso (kg)", 0, 220, 70)
 edad = st.slider("Edad", 0, 100, 30)
 
+actividad = st.selectbox(
+    "Nivel de actividad física",
+    [
+        "Sedentaria (poco o ningún ejercicio)",
+        "Moderada (ejercicio 1-3 veces por semana)", 
+        "Activa (ejercicio 3-5 veces por semana)",
+        "Muy activa (ejercicio 6-7 veces por semana)"
+    ])
+
 genero = st.radio("Género", ["Masculino", "Femenino", "Otro"])
 
 # Cálculo del IMC
