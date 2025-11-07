@@ -75,31 +75,35 @@ if st.button("Calcular IMC"):
 
 
 # Cálculo de peso ideal
-st.subheader("🎯 Tu peso ideal según altura")
+st.subheader("🎯 Calculadora de Rango de Peso Ideal")
 
-if genero == "Masculino":
-    peso_ideal_min = 20 * (altura/100)**2
-    peso_ideal_max = 25 * (altura/100)**2
-else:
-    peso_ideal_min = 19 * (altura/100)**2  
-    peso_ideal_max = 24 * (altura/100)**2
-
-st.write(f"**Rango de peso ideal para tu altura:**")
-st.info(f"Entre **{peso_ideal_min:.1f}kg** y **{peso_ideal_max:.1f}kg**")
-
-diferencia = peso - peso_ideal_max
-if peso > peso_ideal_max:
-    st.warning(f"Te encuentras {diferencia:.1f}kg por encima de tu peso ideal")
-elif peso < peso_ideal_min:
-    st.warning(f"Te encuentras {abs(diferencia):.1f}kg por debajo de tu peso ideal")
-else:
-    st.success("¡Estás en tu peso ideal!")
+if st.button("📊 Calcular Mi Rango Ideal", type="primary", use_container_width=True):
     
-    # Mostrar globos solo si está en peso ideal exacto
-    if diferencia == 0:
-        st.balloons()
-        st.success("🎉 ¡Felicidades! Estás EXACTAMENTE en tu peso ideal")
-    elif diferencia > 0:
-        st.info(f"💪 Para llegar a tu peso ideal: reduce {diferencia:.1f} kg")
+    if genero == "Masculino":
+        peso_ideal_min = 20 * (altura/100)**2
+        peso_ideal_max = 25 * (altura/100)**2
     else:
-        st.info(f"💪 Para llegar a tu peso ideal: aumenta {abs(diferencia):.1f} kg")
+        peso_ideal_min = 19 * (altura/100)**2  
+        peso_ideal_max = 24 * (altura/100)**2
+
+    # Mostrar resultados
+    st.success("**Tu rango de peso ideal:**")
+    
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric("Peso Actual", f"{peso} kg")
+    with col2:
+        st.metric("Mínimo Ideal", f"{peso_ideal_min:.1f} kg")
+    with col3:
+        st.metric("Máximo Ideal", f"{peso_ideal_max:.1f} kg")
+
+    # Evaluación
+    if peso_ideal_min <= peso <= peso_ideal_max:
+        st.balloons()
+        st.success("✅ **¡Perfecto! Estás dentro de tu rango de peso ideal**")
+    elif peso < peso_ideal_min:
+        diferencia = peso_ideal_min - peso
+        st.warning(f"📈 **Recomendación:** Aumenta {diferencia:.1f} kg para llegar al mínimo ideal")
+    else:
+        diferencia = peso - peso_ideal_max
+        st.warning(f"📉 **Recomendación:** Reduce {diferencia:.1f} kg para llegar al máximo ideal")
