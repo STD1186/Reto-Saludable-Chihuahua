@@ -193,6 +193,15 @@ fig, ax = plt.subplots()
     
     st.pyplot(fig)
 
+if peso_ideal_min <= peso <= peso_ideal_max:
+        st.success("✅ ¡Estás en tu peso ideal!")
+    elif peso < peso_ideal_min:
+        st.warning(f"📈 Aumenta {peso_ideal_min - peso:.1f} kg")
+    else:
+        st.warning(f"📉 Reduce {peso - peso_ideal_max:.1f} kg")
+
+
+
 # Recomendaciones de alimentos por categoría
 st.subheader("🥗 Alimentos recomendados")
 
