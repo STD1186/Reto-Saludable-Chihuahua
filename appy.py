@@ -10,7 +10,7 @@ st.write("Calcula tu Índice de Masa Corporal y recibe consejos personalizados")
 st.subheader("Tus datos")
 
 altura = st.slider("Altura (cm)", 0, 220, 170)
-peso = st.slider("Peso (kg)", 0, 150, 70)
+peso = st.slider("Peso (kg)", 0, 220, 70)
 edad = st.slider("Edad", 0, 100, 30)
 
 genero = st.radio("Género", ["Masculino", "Femenino", "Otro"])
