@@ -77,7 +77,7 @@ if st.button("Calcular IMC"):
 # Cálculo de peso ideal
 st.subheader("🎯 Calculadora de Rango de Peso Ideal")
 
-if st.button("📊 Calcular Mi Rango Ideal", type="primary", use_container_width=True):
+if st.button("📊 Calcular Mi Peso Ideal", type="primary", use_container_width=True):
     
     if genero == "Masculino":
         peso_ideal_min = 20 * (altura/100)**2
