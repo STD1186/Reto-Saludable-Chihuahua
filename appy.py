@@ -30,10 +30,8 @@ if st.button("Calcular IMC"):
     altura_m = altura / 100
     imc = peso / (altura_m ** 2)
     
-    # Mostrar resultado
     st.subheader(f"Tu IMC: {imc:.1f}")
 
-    # TODAS las condiciones deben estar DENTRO del bloque del botón
     if imc < 18.5:
         st.warning("Categoría: Bajo peso")
         st.info("""
@@ -79,10 +77,8 @@ if st.button("Calcular IMC"):
 # Cálculo de peso ideal
 st.subheader("Calculadora de Peso Ideal")
 
-# Botón para calcular peso ideal
 if st.button("Calcular Mi Peso Ideal"):
     
-    # Fórmulas específicas
     if genero == "Masculino":
         peso_ideal = 0.75 * altura - 62.5
         st.write("**Fórmula para hombres:** 0.75 × altura(cm) - 62.5")
@@ -90,5 +86,4 @@ if st.button("Calcular Mi Peso Ideal"):
         peso_ideal = 0.675 * altura - 56.25
         st.write("**Fórmula para mujeres:** 0.675 × altura(cm) - 56.25")
 
-    # Mostrar resultado
     st.success(f"**¡Tu peso ideal es:** {peso_ideal:.1f} kg")
