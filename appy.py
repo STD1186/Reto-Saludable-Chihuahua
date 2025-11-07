@@ -149,3 +149,65 @@ meta = st.radio(
     [" Bajar peso", " Mantener peso", " Ganar masa muscular"],
     horizontal=True
 )
+
+if st.button("Ver Recomendaciones Personalizadas"):
+    
+    st.subheader(f" Plan para: {meta}")
+    
+    if meta == " Bajar peso":
+        st.info("""
+        ** Plan de alimentación:**
+        • Déficit calórico de 300-500 kcal diarias
+        • Proteínas: 1.6-2.2g por kg de peso
+        • Reduce carbohidratos simples
+        • Aumenta fibra y verduras
+        
+        **🏃‍♂️ Plan de ejercicio:**
+        • Cardio: 150-300 min/semana
+        • Entrenamiento de fuerza 3 veces/semana
+        • Actividad diaria: 10,000 pasos
+        
+        **💡 Consejos adicionales:**
+        • Come lento y conscientemente
+        • Duerme 7-8 horas
+        • Controla porciones
+        """)
+        
+    elif meta == " Mantener peso":
+        st.info("""
+        ** Plan de alimentación:**
+        • Mantén equilibrio calórico
+        • Proteínas: 1.2-1.6g por kg de peso
+        • Variedad de alimentos
+        • Hidratación constante
+        
+        **🏃‍♂️ Plan de ejercicio:**
+        • Ejercicio mixto 4-5 veces/semana
+        • Cardio y fuerza equilibrados
+        • Actividades recreativas
+        
+        ** Consejos adicionales:**
+        • Monitorea tu peso semanalmente
+        • Mantén rutinas consistentes
+        • Escucha las señales de tu cuerpo
+        """)
+        
+    else:  # Ganar masa muscular
+        st.info("""
+        ** Plan de alimentación:**
+        • Superávit calórico de 300-500 kcal
+        • Proteínas: 1.8-2.5g por kg de peso
+        • Carbohidratos complejos
+        • Grasas saludables
+        
+        ** Plan de ejercicio:**
+        • Fuerza 4-5 veces/semana
+        • Ejercicios compuestos
+        • Descanso entre sesiones
+        • Cardio moderado 2 veces/semana
+        
+        ** Consejos adicionales:**
+        • Enfócate en progresión
+        • Descansa 48h entre grupos musculares
+        • Suplementa con proteína si es necesario
+        """)
