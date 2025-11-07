@@ -139,3 +139,13 @@ if categoria_alimentos in alimentos:
     cols = st.columns(2)
     for i, alimento in enumerate(alimentos[categoria_alimentos]):
         cols[i % 2].write(f"• {alimento}")
+
+
+#meta del usuario
+st.subheader(" Tu Meta Personal")
+
+meta = st.radio(
+    "¿Cuál es tu objetivo?",
+    [" Bajar peso", " Mantener peso", " Ganar masa muscular"],
+    horizontal=True
+)
