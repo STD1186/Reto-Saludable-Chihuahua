@@ -77,16 +77,18 @@ if st.button("Calcular IMC"):
 
 
 # Cálculo de peso ideal
-st.subheader("Tu peso ideal")
+st.subheader("Calculadora de Peso Ideal")
 
-st.subheader("🎯 Peso Ideal y Recomendaciones")
+# Botón para calcular peso ideal
+if st.button("Calcular Mi Peso Ideal"):
+    
+    # Fórmulas específicas
+    if genero == "Masculino":
+        peso_ideal = 0.75 * altura - 62.5
+        st.write("**Fórmula para hombres:** 0.75 × altura(cm) - 62.5")
+    else:
+        peso_ideal = 0.675 * altura - 56.25
+        st.write("**Fórmula para mujeres:** 0.675 × altura(cm) - 56.25")
 
-if genero == "Masculino":
-    peso_ideal = 0.75 * altura - 62.5
-else:
-    peso_ideal = 0.675 * altura - 56.25
-
-diferencia = peso - peso_ideal
-
-st.write(f"**Peso ideal calculado:** {peso_ideal:.1f} kg")
-st.write(f"**Diferencia con tu peso actual:** {diferencia:+.1f} kg")
+    # Mostrar resultado
+    st.success(f"**¡Tu peso ideal es:** {peso_ideal:.1f} kg")
