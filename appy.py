@@ -24,52 +24,52 @@ actividad = st.selectbox(
 
 genero = st.radio("Género", ["Masculino", "Femenino", "Otro"])
 
-#meta del usuario
-st.subheader(" Tu Meta Personal")
+# Meta del usuario
+st.subheader("Tu Meta Personal")
 
 meta = st.radio(
     "¿Cuál es tu objetivo?",
-    [" Bajar peso", " Mantener peso", " Ganar masa muscular"],
+    ["Bajar peso", "Mantener peso", "Ganar masa muscular"],
     horizontal=True
 )
 
 if st.button("Ver Recomendaciones Personalizadas"):
     
-    st.subheader(f" Plan para: {meta}")
+    st.subheader(f"Plan para: {meta}")
     
-    if meta == " Bajar peso":
+    if meta == "Bajar peso":
         st.info("""
-        ** Plan de alimentación:**
+        **Plan de alimentación:**
         • Déficit calórico de 300-500 kcal diarias
         • Proteínas: 1.6-2.2g por kg de peso
         • Reduce carbohidratos simples
         • Aumenta fibra y verduras
         
-        ** Plan de ejercicio:**
+        **Plan de ejercicio:**
         • Cardio: 150-300 min/semana
         • Entrenamiento de fuerza 3 veces/semana
         • Actividad diaria: 10,000 pasos
         
-        ** Consejos adicionales:**
+        **Consejos adicionales:**
         • Come lento y conscientemente
         • Duerme 7-8 horas
         • Controla porciones
         """)
         
-    elif meta == " Mantener peso":
+    elif meta == "Mantener peso":
         st.info("""
-        ** Plan de alimentación:**
+        **Plan de alimentación:**
         • Mantén equilibrio calórico
         • Proteínas: 1.2-1.6g por kg de peso
         • Variedad de alimentos
         • Hidratación constante
         
-        ** Plan de ejercicio:**
+        **Plan de ejercicio:**
         • Ejercicio mixto 4-5 veces/semana
         • Cardio y fuerza equilibrados
         • Actividades recreativas
         
-        ** Consejos adicionales:**
+        **Consejos adicionales:**
         • Monitorea tu peso semanalmente
         • Mantén rutinas consistentes
         • Escucha las señales de tu cuerpo
@@ -77,19 +77,19 @@ if st.button("Ver Recomendaciones Personalizadas"):
         
     else:  # Ganar masa muscular
         st.info("""
-        ** Plan de alimentación:**
+        **Plan de alimentación:**
         • Superávit calórico de 300-500 kcal
         • Proteínas: 1.8-2.5g por kg de peso
         • Carbohidratos complejos
         • Grasas saludables
         
-        ** Plan de ejercicio:**
+        **Plan de ejercicio:**
         • Fuerza 4-5 veces/semana
         • Ejercicios compuestos
         • Descanso entre sesiones
         • Cardio moderado 2 veces/semana
         
-        ** Consejos adicionales:**
+        **Consejos adicionales:**
         • Enfócate en progresión
         • Descansa 48h entre grupos musculares
         • Suplementa con proteína si es necesario
@@ -113,8 +113,8 @@ if st.button("Calcular IMC"):
         • Agrega proteína en cada comida.
         """)
 
-    elif imc < 25:  # Cambiado a 25 (estándar)
-        st.success("Categoría: Peso normal")  # Cambiado a st.success
+    elif imc < 25:
+        st.success("Categoría: Peso normal")
         st.info("""
         **Consejos:**
         • ¡Excelente! Mantén tus hábitos saludables. 
@@ -124,11 +124,11 @@ if st.button("Calcular IMC"):
         """)
 
     elif imc < 30:
-        st.warning("Categoría: Sobrepeso")  # Corregido "sobre peso"
+        st.warning("Categoría: Sobrepeso")
         st.info("""
         **Consejos:**
          • Comienza con pasos simples: más agua, menos bebidas azucaradas.
-         • Camina y haz ejercicio 30 minutos diarios.  # "has" -> "haz"
+         • Camina y haz ejercicio 30 minutos diarios.
          • Las verduras deben cubrir 1/3 de tu plato.
          • Controla el tamaño de las porciones.
          """)
@@ -139,11 +139,9 @@ if st.button("Calcular IMC"):
         **Consejos:**
         • Consulta con un profesional de la salud. 
         • No se trata de rapidez, sino de constancia. Empieza hoy.
-        • Establece metas pequeñas y alcanzables.  # "alcansables" -> "alcanzables"
-        • Comienza con ejercicios suaves como la caminata o la natación.  # "suabes" -> "suaves"
+        • Establece metas pequeñas y alcanzables.
+        • Comienza con ejercicios suaves como la caminata o la natación.
         """)
-
-
 
 # Cálculo de peso ideal
 st.subheader("📊 Calculadora de Peso Ideal")
@@ -168,7 +166,19 @@ if st.button("Calcular Mi Peso Ideal", type="primary", use_container_width=True)
     with col3:
         st.metric("Máximo Ideal", f"{peso_ideal_max:.1f} kg")
 
-    # Evaluación
+    fig, ax = plt.subplots()
+    
+    categorias = ['Peso Actual', 'Mínimo', 'Máximo']
+    pesos = [peso, peso_ideal_min, peso_ideal_max]
+    
+    ax.bar(categorias, pesos, color=['blue', 'green', 'green'])
+    ax.set_ylabel('Peso (kg)')
+    
+    for i, v in enumerate(pesos):
+        ax.text(i, v + 0.5, f'{v:.1f}kg', ha='center')
+    
+    st.pyplot(fig)
+
     if peso_ideal_min <= peso <= peso_ideal_max:
         st.balloons()
         st.success("✅ **¡Perfecto! Estás dentro de tu rango de peso ideal**")
@@ -179,29 +189,6 @@ if st.button("Calcular Mi Peso Ideal", type="primary", use_container_width=True)
         diferencia = peso - peso_ideal_max
         st.warning(f"📉 **Recomendación:** Reduce {diferencia:.1f} kg para llegar al máximo ideal")
 
-fig, ax = plt.subplots()
-    
-    categorias = ['Peso Actual', 'Mínimo', 'Máximo']
-    pesos = [peso, peso_ideal_min, peso_ideal_max]
-    
-    ax.bar(categorias, pesos, color=['blue', 'green', 'green'])
-    ax.set_ylabel('Peso (kg)')
-    
-    # Mostrar valores en las barras
-    for i, v in enumerate(pesos):
-        ax.text(i, v + 0.5, f'{v:.1f}kg', ha='center')
-    
-    st.pyplot(fig)
-
-if peso_ideal_min <= peso <= peso_ideal_max:
-        st.success("✅ ¡Estás en tu peso ideal!")
-    elif peso < peso_ideal_min:
-        st.warning(f"📈 Aumenta {peso_ideal_min - peso:.1f} kg")
-    else:
-        st.warning(f"📉 Reduce {peso - peso_ideal_max:.1f} kg")
-
-
-
 # Recomendaciones de alimentos por categoría
 st.subheader("🥗 Alimentos recomendados")
 
@@ -211,7 +198,7 @@ categoria_alimentos = st.radio(
 )
 
 alimentos = {
-    "Proteínas": [ "Pechuga de pollo", "Salmón", "Huevos", "Legumbres", "Tofu", "Yogur griego", "Atún", "Quinoa"],
+    "Proteínas": ["Pechuga de pollo", "Salmón", "Huevos", "Legumbres", "Tofu", "Yogur griego", "Atún", "Quinoa"],
     "Carbohidratos": ["Avena", "Arroz integral", "Camote", "Pasta integral", "Pan integral", "Banana", "Maíz", "Lentejas"],
     "Grasas saludables": ["Aguacate", "Nueces", "Aceite de oliva", "Semillas de chía", "Almendras", "Pescados azules", "Aceitunas"],
     "Frutas y Verduras": ["Espinacas", "Brócoli", "Manzana", "Zanahoria", "Fresas", "Tomate", "Col rizada", "Arándanos"]
