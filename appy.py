@@ -117,20 +117,10 @@ categoria_alimentos = st.radio(
 )
 
 alimentos = {
-    "Proteínas": [ "Pechuga de pollo", "Salmón", "Huevos", "Legumbres", 
-        "Tofu", "Yogur griego", "Atún", "Quinoa"],
-    "Carbohidratos": [
-        "Avena", "Arroz integral", "Camote", "Pasta integral",
-        "Pan integral", "Banana", "Maíz", "Lentejas"
-    ],
-    "Grasas saludables": [
-        "Aguacate", "Nueces", "Aceite de oliva", "Semillas de chía",
-        "Almendras", "Pescados azules", "Aceitunas"
-    ],
-    "Frutas y Verduras": [
-        "Espinacas", "Brócoli", "Manzana", "Zanahoria",
-        "Fresas", "Tomate", "Col rizada", "Arándanos"
-    ]
+    "Proteínas": [ "Pechuga de pollo", "Salmón", "Huevos", "Legumbres", "Tofu", "Yogur griego", "Atún", "Quinoa"],
+    "Carbohidratos": ["Avena", "Arroz integral", "Camote", "Pasta integral", "Pan integral", "Banana", "Maíz", "Lentejas"],
+    "Grasas saludables": ["Aguacate", "Nueces", "Aceite de oliva", "Semillas de chía", "Almendras", "Pescados azules", "Aceitunas"],
+    "Frutas y Verduras": ["Espinacas", "Brócoli", "Manzana", "Zanahoria", "Fresas", "Tomate", "Col rizada", "Arándanos"]
 }
 
 if categoria_alimentos in alimentos:
