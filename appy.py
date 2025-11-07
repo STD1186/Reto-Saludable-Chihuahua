@@ -86,6 +86,16 @@ if st.button("Calcular Mi Peso Ideal"):
 
     st.success(f"**¡Tu peso ideal es:** {peso_ideal:.1f} kg")
 
-        else:
-            st.balloons()
-            st.success("¡Felicidades! Estás en tu peso ideal 🎉")
+if calcular_peso_ideal:
+    if genero == "Masculino":
+        peso_ideal = 0.75 * altura - 62.5
+    else:
+        peso_ideal = 0.675 * altura - 56.25
+    
+    diferencia = peso - peso_ideal
+    
+    if diferencia == 0:
+        st.balloons()
+        st.success("🎉 ¡Felicidades! Estás EXACTAMENTE en tu peso ideal")
+    else:
+        st.info(f"**Peso ideal calculado:** {peso_ideal:.1f} kg")
