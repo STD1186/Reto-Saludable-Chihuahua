@@ -73,3 +73,26 @@ if st.button("Calcular IMC"):
         • Establece metas pequeñas y alcanzables.  # "alcansables" -> "alcanzables"
         • Comienza con ejercicios suaves como la caminata o la natación.  # "suabes" -> "suaves"
         """)
+
+
+
+# Cálculo de peso ideal
+st.subheader("Tu peso ideal")
+
+if genero == "Masculino":
+    peso_ideal_min = 20 * (altura/100)**2
+    peso_ideal_max = 25 * (altura/100)**2
+else:
+    peso_ideal_min = 19 * (altura/100)**2  
+    peso_ideal_max = 24 * (altura/100)**2
+
+st.write(f"**Rango de peso ideal:**")
+st.info(f"Entre **{peso_ideal_min:.1f}kg** y **{peso_ideal_max:.1f}kg**")
+
+diferencia = peso - peso_ideal_max
+if peso > peso_ideal_max:
+    st.warning(f"Te encuentras {diferencia:.1f}kg por encima de tu peso ideal")
+elif peso < peso_ideal_min:
+    st.warning(f"Te encuentras {abs(diferencia):.1f}kg por debajo de tu peso ideal")
+else:
+    st.success("¡Estás en tu peso ideal!")
