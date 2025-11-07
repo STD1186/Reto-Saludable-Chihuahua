@@ -25,7 +25,7 @@ if st.button("Calcular IMC"):
     st.subheader(f"Tu IMC: {imc:.1f}")
 
 if imc < 18.5:
-        st.warning("Categoría: Bajo peso")
+        st.wrning("Categoría: Bajo peso")
         st.info("""
         **Consejos:**
         • Aumenta tus porciones poco a poco. Tu cuerpo necesita más combustible.
