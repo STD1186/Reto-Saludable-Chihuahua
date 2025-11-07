@@ -117,10 +117,8 @@ categoria_alimentos = st.radio(
 )
 
 alimentos = {
-    "Proteínas": [
-        "Pechuga de pollo", "Salmón", "Huevos", "Legumbres", 
-        "Tofu", "Yogur griego", "Atún", "Quinoa"
-    ],
+    "Proteínas": [ "Pechuga de pollo", "Salmón", "Huevos", "Legumbres", 
+        "Tofu", "Yogur griego", "Atún", "Quinoa"],
     "Carbohidratos": [
         "Avena", "Arroz integral", "Camote", "Pasta integral",
         "Pan integral", "Banana", "Maíz", "Lentejas"
@@ -162,12 +160,12 @@ if st.button("Ver Recomendaciones Personalizadas"):
         • Reduce carbohidratos simples
         • Aumenta fibra y verduras
         
-        **🏃‍♂️ Plan de ejercicio:**
+        ** Plan de ejercicio:**
         • Cardio: 150-300 min/semana
         • Entrenamiento de fuerza 3 veces/semana
         • Actividad diaria: 10,000 pasos
         
-        **💡 Consejos adicionales:**
+        ** Consejos adicionales:**
         • Come lento y conscientemente
         • Duerme 7-8 horas
         • Controla porciones
@@ -181,7 +179,7 @@ if st.button("Ver Recomendaciones Personalizadas"):
         • Variedad de alimentos
         • Hidratación constante
         
-        **🏃‍♂️ Plan de ejercicio:**
+        ** Plan de ejercicio:**
         • Ejercicio mixto 4-5 veces/semana
         • Cardio y fuerza equilibrados
         • Actividades recreativas
