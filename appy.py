@@ -75,7 +75,7 @@ if st.button("Calcular IMC"):
 
 
 # Cálculo de peso ideal
-st.subheader("Calculadora de Peso Ideal")
+st.subheader("📊 Calculadora de Peso Ideal")
 
 if st.button("Calcular Mi Peso Ideal", type="primary", use_container_width=True):
     
