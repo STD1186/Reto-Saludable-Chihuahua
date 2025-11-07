@@ -79,20 +79,14 @@ if st.button("Calcular IMC"):
 # Cálculo de peso ideal
 st.subheader("Tu peso ideal")
 
+st.subheader("🎯 Peso Ideal y Recomendaciones")
+
 if genero == "Masculino":
-    peso_ideal_min = 20 * (altura/100)**2
-    peso_ideal_max = 25 * (altura/100)**2
+    peso_ideal = 0.75 * altura - 62.5
 else:
-    peso_ideal_min = 19 * (altura/100)**2  
-    peso_ideal_max = 24 * (altura/100)**2
+    peso_ideal = 0.675 * altura - 56.25
 
-st.write(f"**Rango de peso ideal:**")
-st.info(f"Entre **{peso_ideal_min:.1f}kg** y **{peso_ideal_max:.1f}kg**")
+diferencia = peso - peso_ideal
 
-diferencia = peso - peso_ideal_max
-if peso > peso_ideal_max:
-    st.warning(f"Te encuentras {diferencia:.1f}kg por encima de tu peso ideal")
-elif peso < peso_ideal_min:
-    st.warning(f"Te encuentras {abs(diferencia):.1f}kg por debajo de tu peso ideal")
-else:
-    st.success("¡Estás en tu peso ideal!")
+st.write(f"**Peso ideal calculado:** {peso_ideal:.1f} kg")
+st.write(f"**Diferencia con tu peso actual:** {diferencia:+.1f} kg")
