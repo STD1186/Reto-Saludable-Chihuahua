@@ -179,6 +179,20 @@ if st.button("Calcular Mi Peso Ideal", type="primary", use_container_width=True)
         diferencia = peso - peso_ideal_max
         st.warning(f"📉 **Recomendación:** Reduce {diferencia:.1f} kg para llegar al máximo ideal")
 
+fig, ax = plt.subplots()
+    
+    categorias = ['Peso Actual', 'Mínimo', 'Máximo']
+    pesos = [peso, peso_ideal_min, peso_ideal_max]
+    
+    ax.bar(categorias, pesos, color=['blue', 'green', 'green'])
+    ax.set_ylabel('Peso (kg)')
+    
+    # Mostrar valores en las barras
+    for i, v in enumerate(pesos):
+        ax.text(i, v + 0.5, f'{v:.1f}kg', ha='center')
+    
+    st.pyplot(fig)
+
 # Recomendaciones de alimentos por categoría
 st.subheader("🥗 Alimentos recomendados")
 
