@@ -107,3 +107,35 @@ if st.button("📊 Calcular Mi Peso Ideal", type="primary", use_container_width=
     else:
         diferencia = peso - peso_ideal_max
         st.warning(f"📉 **Recomendación:** Reduce {diferencia:.1f} kg para llegar al máximo ideal")
+
+# Recomendaciones de alimentos por categoría
+st.subheader("🥗 Alimentos recomendados")
+
+categoria_alimentos = st.radio(
+    "Selecciona categoría:",
+    ["Proteínas", "Carbohidratos", "Grasas saludables", "Frutas y Verduras"]
+)
+
+alimentos = {
+    "Proteínas": [
+        "Pechuga de pollo", "Salmón", "Huevos", "Legumbres", 
+        "Tofu", "Yogur griego", "Atún", "Quinoa"
+    ],
+    "Carbohidratos": [
+        "Avena", "Arroz integral", "Camote", "Pasta integral",
+        "Pan integral", "Banana", "Maíz", "Lentejas"
+    ],
+    "Grasas saludables": [
+        "Aguacate", "Nueces", "Aceite de oliva", "Semillas de chía",
+        "Almendras", "Pescados azules", "Aceitunas"
+    ],
+    "Frutas y Verduras": [
+        "Espinacas", "Brócoli", "Manzana", "Zanahoria",
+        "Fresas", "Tomate", "Col rizada", "Arándanos"
+    ]
+}
+
+if categoria_alimentos in alimentos:
+    cols = st.columns(2)
+    for i, alimento in enumerate(alimentos[categoria_alimentos]):
+        cols[i % 2].write(f"• {alimento}")
