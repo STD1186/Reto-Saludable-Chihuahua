@@ -170,12 +170,12 @@ if st.button("Ver Recomendaciones Personalizadas"):
         • Duerme 7-8 horas
         • Controla porciones
         """)
-# Recomendaciones
+# Platillos recomendados
 if st.button("Ver Platillos Personalizados"):
     
     st.subheader(f"🍽️ Platillos Recomendados para {meta}")
     
-    if meta == "💪 Ganar músculo":
+    if meta == "💪 Ganar masa muscular":
         
         st.info("""
         **🍗 Pechuga de Pollo a la Plancha con Boniato y Brócoli**
@@ -209,7 +209,7 @@ if st.button("Ver Platillos Personalizados"):
         · Puntos Fuertes: Ideal para post-entreno o para quienes tienen poco apetito
         """)
         
-    elif meta == "📉 Perder grasa":
+    elif meta == "📉 Bajar peso":
         
         st.info("""
         **🥗 Ensalada de Lentejas con Verduras y Salmón/Pollo**
@@ -251,7 +251,7 @@ if st.button("Ver Platillos Personalizados"):
         · Puntos Fuertes: Muy bajo en calorías y alto en proteína, perfecto para cena
         """)
         
-    elif meta == "⚖️ Ganar peso":
+    elif meta == "⚖️ Mantener peso":
         
         st.info("""
         **🍝 Pasta Integral con Salsa de Carne Molida y Queso**
