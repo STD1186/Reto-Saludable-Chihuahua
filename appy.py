@@ -243,7 +243,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         • Paciencia - objetivo realista: 0.5-1kg/semana
         """)
         
-    else meta ==  "⚖️ Mantener peso":
+    elif meta ==  "⚖️ Mantener peso":
         st.success("**🎯 Estrategia: Equilibrio y Consistencia**")
         
         st.subheader("🍽️ Plan de Alimentación")
