@@ -1,7 +1,18 @@
 import streamlit as st
-
 import matplotlib.pyplot as plt
 import numpy as np
+
+#Barra lateral
+st.sidebar:
+" TEMA: ALIMENTOS
+GRUPO: 3L
+INTEGRANTES:
+Sasha Torres Davidson 385944
+Victoria Izquierdo Navarrro 385983
+Ever Gibran García Martinez 385898
+Deyra Renata Herrera Juárez 385845
+Mayra Mariel Jimenez Navarrete 385869
+"
 
 st.title("🍏 Reto Saludable Chihuahua")
 st.write("Calcula tu Índice de Masa Corporal y recibe consejos personalizados")
