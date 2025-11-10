@@ -171,7 +171,7 @@ if st.button("Ver Recomendaciones Personalizadas"):
         • Controla porciones
         """)
 # Recomendaciones
-if st.button("Ver Recomendaciones Personalizadas"):
+if st.button("Ver Platillos Personalizados"):
     
     st.subheader(f"🍽️ Platillos Recomendados para {meta}")
     
