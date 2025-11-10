@@ -170,85 +170,125 @@ if st.button("Ver Recomendaciones Personalizadas"):
         • Duerme 7-8 horas
         • Controla porciones
         """)
-     st.subheader("🍽️ platillos recomendados")
-      col1, col2 = st.columns(2)
-      with col1:
-            st.write("**Desayuno:**")
-            st.write("• Avena con frutos rojos")
-            st.write("• Huevos revueltos con espinacas")
-            st.write("• Yogur griego con nueces")
-            
-            st.write("**Almuerzo:**")
-            st.write("• Ensalada de quinoa y pollo")
-            st.write("• Salmón al horno con verduras")
-            st.write("• Wrap de pavo y aguacate")
-            
-        with col2:
-            st.write("**Cena:**")
-            st.write("• Crema de verduras")
-            st.write("• Pescado a la plancha con espárragos")
-            st.write("• Tortilla de claras con champiñones")
-            
-            st.write("**Snacks:**")
-            st.write("• Manzana con almendras")
-            st.write("• Zanahorias con hummus")
-            st.write("• Palitos de pepino")
+# Recomendaciones
+if st.button("Ver Recomendaciones Personalizadas"):
+    
+    st.subheader(f"🍽️ Platillos Recomendados para {meta}")
+    
+    if meta == "💪 Ganar músculo":
         
-    elif meta == "Mantener peso":
         st.info("""
-        **Plan de alimentación:**
-        • Mantén equilibrio calórico
-        • Proteínas: 1.2-1.6g por kg de peso
-        • Variedad de alimentos
-        • Hidratación constante
-        
-        **Plan de ejercicio:**
-        • Ejercicio mixto 4-5 veces/semana
-        • Cardio y fuerza equilibrados
-        • Actividades recreativas
-        
-        **Consejos adicionales:**
-        • Monitorea tu peso semanalmente
-        • Mantén rutinas consistentes
-        • Escucha las señales de tu cuerpo
+        **🍗 Pechuga de Pollo a la Plancha con Boniato y Brócoli**
+        · Porción: 1 pechuga (200g), 1 boniato (200g), 1 taza de brócoli
+        · Calorías: ~480-550 kcal
+        · Proteínas: ~45-50g | Grasas: ~8-12g | Carbohidratos: ~55-60g
+        · Puntos Fuertes: Proteína magra de alta calidad para reparar músculo
         """)
         
-    else:  # Ganar masa muscular
         st.info("""
-        **Plan de alimentación:**
-        • Superávit calórico de 300-500 kcal
-        • Proteínas: 1.8-2.5g por kg de peso
-        • Carbohidratos complejos
-        • Grasas saludables
-        
-        **Plan de ejercicio:**
-        • Fuerza 4-5 veces/semana
-        • Ejercicios compuestos
-        • Descanso entre sesiones
-        • Cardio moderado 2 veces/semana
-        
-        **Consejos adicionales:**
-        • Enfócate en progresión
-        • Descansa 48h entre grupos musculares
-        • Suplementa con proteína si es necesario
+        **🐟 Salmón al Horno con Quinoa y Espárragos**
+        · Porción: 1 filete de salmón (180g), 1 taza de quinoa, 10-12 espárragos
+        · Calorías: ~580-650 kcal
+        · Proteínas: ~40-45g | Grasas: ~25-30g | Carbohidratos: ~45-50g
+        · Puntos Fuertes: Combinación excelente de proteína y grasas antiinflamatorias
         """)
-
-# Recomendaciones de alimentos por categoría
-st.subheader("🥗 Alimentos recomendados")
-
-categoria_alimentos = st.radio(
-    "Selecciona categoría:",
-    ["Proteínas", "Carbohidratos", "Grasas saludables", "Frutas y Verduras"]
-)
-
-alimentos = {
-    "Proteínas": ["Pechuga de pollo", "Carnes rojas", "Salmón", "Huevos", "Legumbres", "Tofu", "Yogur griego", "Atún", "Quinoa"],
-    "Carbohidratos": ["Avena", "Arroz integral", "Camote", "Pasta integral", "Pan integral", "Platano", "Maíz", "Legumbres"],
-    "Grasas saludables": ["Aguacate", "Nueces", "Aceite de oliva", "Semillas de chía", "Almendras", "Pescados azules", "Aceitunas"],
-    "Frutas y Verduras": ["Espinacas", "Brócoli", "Manzana", "Zanahoria", "Fresas", "Tomate", "Col rizada", "Arándanos"]
-}
-
-if categoria_alimentos in alimentos:
-    cols = st.columns(2)
-    for i, alimento in enumerate(alimentos[categoria_alimentos]):
-        cols[i % 2].write(f"• {alimento}")
+        
+        st.info("""
+        **🍚 Bowl de Arroz Integral, Lentejas y Huevo Duro**
+        · Porción: 1 taza de arroz, 1 taza de lentejas, 2 huevos duros
+        · Calorías: ~550-620 kcal
+        · Proteínas: ~30-35g | Grasas: ~12-15g | Carbohidratos: ~80-90g
+        · Puntos Fuertes: Fuente de energía sostenible y fibra
+        """)
+        
+        st.info("""
+        **🥤 Batido 'Volumen Sano'**
+        · Porción: 300ml leche, 1 plátano, 40g avena, 1 cda. mantequilla de cacahuete
+        · Calorías: ~550-650 kcal
+        · Proteínas: ~35-40g | Grasas: ~18-22g | Carbohidratos: ~70-80g
+        · Puntos Fuertes: Ideal para post-entreno o para quienes tienen poco apetito
+        """)
+        
+    elif meta == "📉 Perder grasa":
+        
+        st.info("""
+        **🥗 Ensalada de Lentejas con Verduras y Salmón/Pollo**
+        · Porción: 1 taza de lentejas, 2 tazas de verduras, 120g de salmón o pollo
+        · Calorías: ~380-450 kcal
+        · Proteínas: ~35-40g | Grasas: ~10-15g | Carbohidratos: ~45-50g
+        · Puntos Fuertes: Altísimo contenido en fibra y proteína, gran saciedad
+        """)
+        
+        st.info("""
+        **🌯 Wrap de Lechuga con Pavo/Pollo y Aguacate**
+        · Porción: 2-3 hojas de lechuga, 120g de pavo/pollo, 1/4 de aguacate
+        · Calorías: ~250-300 kcal
+        · Proteínas: ~25-30g | Grasas: ~10-12g | Carbohidratos: ~10-15g
+        · Puntos Fuertes: Bajo en carbohidratos y calorías, controla el hambre
+        """)
+        
+        st.info("""
+        **🍲 Caldo de Pescado o Pollo con Verduras y Pechuga**
+        · Porción: 1 plato de caldo, 1 taza de verduras, 120g de pechuga
+        · Calorías: ~200-280 kcal
+        · Proteínas: ~25-30g | Grasas: ~5-8g | Carbohidratos: ~15-20g
+        · Puntos Fuertes: Muy bajo en calorías pero alto en volumen y proteína
+        """)
+        
+        st.info("""
+        **🥣 Bowl de Quinoa con Garbanzos y Verduras**
+        · Porción: 3/4 taza de quinoa, 1/2 taza de garbanzos, 1.5 tazas de verduras
+        · Calorías: ~320-380 kcal
+        · Proteínas: ~15-18g | Grasas: ~8-10g | Carbohidratos: ~55-60g
+        · Puntos Fuertes: Plato vegetariano saciante con proteína vegetal y fibra
+        """)
+        
+        st.info("""
+        **🍳 Revuelto de 1 Huevo Entero + 2 Claras con Espinacas y Champiñones**
+        · Porción: 1 huevo entero, 2 claras, 2 tazas de espinacas y champiñones
+        · Calorías: ~150-180 kcal
+        · Proteínas: ~20-22g | Grasas: ~6-8g | Carbohidratos: ~5-7g
+        · Puntos Fuertes: Muy bajo en calorías y alto en proteína, perfecto para cena
+        """)
+        
+    elif meta == "⚖️ Ganar peso":
+        
+        st.info("""
+        **🍝 Pasta Integral con Salsa de Carne Molida y Queso**
+        · Porción: 100g pasta integral, 120g carne molida, 30g queso
+        · Calorías: ~650-750 kcal
+        · Proteínas: ~40-45g | Grasas: ~20-25g | Carbohidratos: ~80-90g
+        · Puntos Fuertes: Alta densidad calórica y de carbohidratos
+        """)
+        
+        st.info("""
+        **🥤 Batido 'Hipercalórico Natural'**
+        · Porción: 400ml leche, 1.5 plátanos, 60g avena, 1.5 cda. mantequilla de cacahuete
+        · Calorías: ~750-900 kcal
+        · Proteínas: ~25-30g | Grasas: ~30-35g | Carbohidratos: ~100-110g
+        · Puntos Fuertes: Forma eficiente de consumir muchas calorías de calidad
+        """)
+        
+        st.info("""
+        **🍛 Arroz Frito con Ternera, Verduras y Huevo**
+        · Porción: 1.5 tazas de arroz, 120g de ternera, 1 huevo, 1 taza de verduras
+        · Calorías: ~700-800 kcal
+        · Proteínas: ~35-40g | Grasas: ~25-30g | Carbohidratos: ~90-100g
+        · Puntos Fuertes: Plato muy calórico y sabroso, excelente post-entreno
+        """)
+        
+        st.info("""
+        **🥪 Sándwich de Pan Integral con Pollo, Aguacate y Mayonesa de Yogur**
+        · Porción: 2 rebanadas de pan, 120g de pollo, 1/2 aguacate
+        · Calorías: ~500-600 kcal
+        · Proteínas: ~35-40g | Grasas: ~20-25g | Carbohidratos: ~45-55g
+        · Puntos Fuertes: Forma sencilla y portable de añadir calorías buenas
+        """)
+        
+        st.info("""
+        **🥩 Filete de Ternera con Puré de Patatas y Maíz**
+        · Porción: 1 filete de ternera (180g), 1.5 tazas de puré, 1/2 taza de maíz
+        · Calorías: ~750-850 kcal
+        · Proteínas: ~45-50g | Grasas: ~30-35g | Carbohidratos: ~70-80g
+        · Puntos Fuertes: Plato muy denso y tradicional, rico en hierro y proteína
+        """)
