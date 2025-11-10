@@ -156,7 +156,6 @@ if st.button("Calcular Mi Peso Ideal", type="primary", use_container_width=True)
         peso_ideal_min = 19 * (altura/100)**2  
         peso_ideal_max = 24 * (altura/100)**2
 
-    # Mostrar resultados
     st.success("**Tu rango de peso ideal:**")
     
     col1, col2, col3 = st.columns(3)
@@ -204,8 +203,3 @@ alimentos = {
     "Grasas saludables": ["Aguacate", "Nueces", "Aceite de oliva", "Semillas de chía", "Almendras", "Pescados azules", "Aceitunas"],
     "Frutas y Verduras": ["Espinacas", "Brócoli", "Manzana", "Zanahoria", "Fresas", "Tomate", "Col rizada", "Arándanos"]
 }
-
-if categoria_alimentos in alimentos:
-    cols = st.columns(2)
-    for i, alimento in enumerate(alimentos[categoria_alimentos]):
-        cols[i % 2].write(f"• {alimento}")
