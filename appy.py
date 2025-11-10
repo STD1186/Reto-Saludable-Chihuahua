@@ -147,7 +147,150 @@ meta = st.radio(
     ["📉Bajar peso", "⚖️ Mantener peso", "💪Ganar masa muscular"],
     horizontal=True
 )
-
+# Recomendaciones perzonalizadas
+if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
+    
+    if meta == "💪 Ganar masa muscular":
+        st.success("**🎯 Estrategia: Superávit Calórico Inteligente**")
+        
+        st.subheader("🍽️ Plan de Alimentación")
+        st.write("""
+        **Distribución Diaria:**
+        • Calorías: 300-500 kcal más que tu mantenimiento
+        • Proteínas: 2.0-2.5g por kg de peso
+        • Grasas: 25-30% del total calórico
+        • Carbohidratos: 45-50% del total calórico
+        
+        **Timing Nutricional:**
+        • Comer cada 3-4 horas
+        • Carbohidratos alrededor del entrenamiento
+        • Proteína post-entreno (30-60 min después)
+        • Cena con proteína de digestión lenta (caseína)
+        
+        **Alimentos Clave:**
+        • Carnes magras, pescados, huevos
+        • Carbohidratos complejos (arroz, papa, avena)
+        • Grasas saludables (aceite de oliva, frutos secos)
+        • Lácteos (yogur griego, queso cottage)
+        """)
+        
+        st.subheader("💪 Plan de Ejercicio")
+        st.write("""
+        **Rutina Semanal:**
+        • Fuerza: 4-5 días/semana
+        • Cardio: 2-3 días/semana (moderado, 20-30 min)
+        • Descanso activo: 1-2 días/semana
+        
+        **Enfoque:**
+        • Ejercicios compuestos principales
+        • Progresión constante en pesos
+        • Técnica perfecta antes de aumentar carga
+        • Descanso entre series: 60-90 segundos
+        """)
+        
+        st.subheader("💡 Consejos Específicos")
+        st.write("""
+        • Enfócate en la progresión, no solo en el dolor
+        • Descansa 48 horas entre grupos musculares
+        • Suplementa con proteína en polvo si es necesario
+        • Toma creatina monohidrato
+        • Objetivo realista: 0.5-1kg de músculo/mes
+        """)
+        
+    elif meta == "📉 Bajar peso":
+        st.success("**🎯 Estrategia: Déficit Calórico Controlado**")
+        
+        st.subheader("🍽️ Plan de Alimentación")
+        st.write("""
+        **Distribución Diaria:**
+        • Calorías: 300-500 kcal menos que tu mantenimiento
+        • Proteínas: 1.8-2.2g por kg de peso
+        • Grasas: 25-30% del total calórico
+        • Carbohidratos: 40-45% del total calórico
+        
+        **Frecuencia de Comidas:**
+        • 3 comidas principales + 2 snacks
+        • Ayuno intermitente opcional (16:8)
+        • Cena ligera 3 horas antes de dormir
+        
+        **Alimentos Clave:**
+        • Verduras de hoja verde
+        • Proteínas magras (pollo, pescado)
+        • Grasas saludables (aguacate, nueces)
+        • Fibra soluble (avena, manzana)
+        """)
+        
+        st.subheader("💪 Plan de Ejercicio")
+        st.write("""
+        **Rutina Semanal:**
+        • Cardio: 4-5 días/semana (30-45 min)
+        • Fuerza: 3-4 días/semana
+        • HIIT: 2 sesiones/semana
+        • Actividad diaria: 10,000+ pasos
+        
+        **Enfoque:**
+        • Mantener masa muscular mientras pierdes grasa
+        • Ejercicios compuestos (sentadillas, press)
+        • Progresión en cargas
+        """)
+        
+        st.subheader("💡 Consejos Específicos")
+        st.write("""
+        • Toma 2-3 litros de agua al día
+        • Duerme 7-8 horas de calidad
+        • Controla el estrés (meditación, yoga)
+        • Pésate 1 vez por semana, no diario
+        • Paciencia - objetivo realista: 0.5-1kg/semana
+        """)
+        
+    else meta ==  "⚖️ Mantener peso":
+        st.success("**🎯 Estrategia: Equilibrio y Consistencia**")
+        
+        st.subheader("🍽️ Plan de Alimentación")
+        st.write("""
+        **Distribución Diaria:**
+        • Calorías: Mantenimiento (ni déficit ni superávit)
+        • Proteínas: 1.2-1.6g por kg de peso
+        • Grasas: 25-35% del total calórico
+        • Carbohidratos: 45-55% del total calórico
+        
+        **Balance Nutricional:**
+        • Variedad de todos los grupos alimenticios
+        • Comidas regulares sin saltarse ninguna
+        • Hidratación constante durante el día
+        • Flexibilidad para ocasiones especiales
+        
+        **Alimentos Clave:**
+        • Frutas y verduras de todos los colores
+        • Proteínas variadas (animales y vegetales)
+        • Granos enteros y legumbres
+        • Grasas saludables en moderación
+        """)
+        
+        st.subheader("💪 Plan de Ejercicio")
+        st.write("""
+        **Rutina Semanal:**
+        • Ejercicio mixto: 4-5 días/semana
+        • Fuerza: 2-3 días/semana
+        • Cardio: 2-3 días/semana
+        • Flexibilidad: 1-2 días/semana
+        
+        **Enfoque:**
+        • Mantener condición física general
+        • Prevenir pérdida muscular
+        • Actividades que disfrutes
+        • Variedad para evitar aburrimiento
+        """)
+        
+        st.subheader("💡 Consejos Específicos")
+        st.write("""
+        • Monitorea tu peso 1-2 veces por mes
+        • Mantén rutinas consistentes
+        • Escucha las señales de hambre y saciedad
+        • Permite flexibilidad en tu plan
+        • Enfócate en salud a largo plazo, no solo peso
+        • Disfruta del proceso y celebra tu consistencia
+        """)
 if st.button("Ver Recomendaciones Personalizadas"):
     
     st.subheader(f"Plan para: {meta}")
