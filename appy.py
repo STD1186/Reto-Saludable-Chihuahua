@@ -29,7 +29,7 @@ st.subheader("🏅 Tu Meta Personal")
 
 meta = st.radio(
     "¿Cuál es tu objetivo?",
-    ["Bajar peso", "Mantener peso", "Ganar masa muscular"],
+    ["⬇️Bajar peso", "⚖️ Mantener peso", "💪Ganar masa muscular"],
     horizontal=True
 )
 
