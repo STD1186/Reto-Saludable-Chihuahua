@@ -8,6 +8,7 @@ with st.sidebar:
  st.write(""" 
  TEMA: ALIMENTOS
 * GRUPO: 3L
+
 INTEGRANTES:
 * Sasha Torres Davidson 385944
 * Victoria Izquierdo Navarrro 385983
