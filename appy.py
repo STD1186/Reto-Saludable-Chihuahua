@@ -12,7 +12,7 @@ with st.sidebar:
 
  MATERIA:PROGRAMACIÓN
  
-* GRUPO: 3L
+GRUPO: 3L
 
 INTEGRANTES:
 * Sasha Torres Davidson 385944
