@@ -150,7 +150,7 @@ meta = st.radio(
 # Recomendaciones perzonalizadas
 if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
     
-    if meta == "💪 Ganar masa muscular":
+    if meta == "💪Ganar masa muscular":
         st.success("**🎯 Estrategia: Superávit Calórico Inteligente**")
         
         st.subheader("🍽️ Plan de Alimentación")
@@ -197,7 +197,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         • Objetivo realista: 0.5-1kg de músculo/mes
         """)
         
-    elif meta == "📉 Bajar peso":
+    elif meta == "📉Bajar peso":
         st.success("**🎯 Estrategia: Déficit Calórico Controlado**")
         
         st.subheader("🍽️ Plan de Alimentación")
