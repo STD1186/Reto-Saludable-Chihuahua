@@ -5,8 +5,8 @@ import numpy as np
 #Barra lateral
 with st.sidebar:
  st.title("Datos Institucionales")
- st.write(
-" TEMA: ALIMENTOS
+ st.write(""" 
+ TEMA: ALIMENTOS
 GRUPO: 3L
 INTEGRANTES:
 Sasha Torres Davidson 385944
@@ -14,7 +14,7 @@ Victoria Izquierdo Navarrro 385983
 Ever Gibran García Martinez 385898
 Deyra Renata Herrera Juárez 385845
 Mayra Mariel Jimenez Navarrete 385869
-")
+""")
 
 st.title("🍏 Reto Saludable Chihuahua")
 st.write("Calcula tu Índice de Masa Corporal y recibe consejos personalizados")
