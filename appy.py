@@ -7,6 +7,11 @@ with st.sidebar:
  st.title("Datos Institucionales")
  st.write(""" 
  TEMA: ALIMENTOS
+
+ INSTITUCIÓN: UNIVERSIDAD AUTÓNOMA DE CHIHUAHUA "FACULTAD DE CIENCIAS QUÍMICAS"
+
+ MATERIA:PROGRAMACIÓN
+ 
 * GRUPO: 3L
 
 INTEGRANTES:
