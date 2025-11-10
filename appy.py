@@ -170,6 +170,29 @@ if st.button("Ver Recomendaciones Personalizadas"):
         • Duerme 7-8 horas
         • Controla porciones
         """)
+     st.subheader("🍽️ platillos recomendados")
+      col1, col2 = st.columns(2)
+      with col1:
+            st.write("**Desayuno:**")
+            st.write("• Avena con frutos rojos")
+            st.write("• Huevos revueltos con espinacas")
+            st.write("• Yogur griego con nueces")
+            
+            st.write("**Almuerzo:**")
+            st.write("• Ensalada de quinoa y pollo")
+            st.write("• Salmón al horno con verduras")
+            st.write("• Wrap de pavo y aguacate")
+            
+        with col2:
+            st.write("**Cena:**")
+            st.write("• Crema de verduras")
+            st.write("• Pescado a la plancha con espárragos")
+            st.write("• Tortilla de claras con champiñones")
+            
+            st.write("**Snacks:**")
+            st.write("• Manzana con almendras")
+            st.write("• Zanahorias con hummus")
+            st.write("• Palitos de pepino")
         
     elif meta == "Mantener peso":
         st.info("""
