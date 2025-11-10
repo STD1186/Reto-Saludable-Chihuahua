@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #Barra lateral
-whit st.sidebar:
+with st.sidebar:
  st.title("Datos Institucionales")
  st.write(
 " TEMA: ALIMENTOS
