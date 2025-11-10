@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.title("⚖️ Reto Saludable Chihuahua")
+st.title("Reto Saludable Chihuahua")
 st.write("Calcula tu Índice de Masa Corporal y recibe consejos personalizados")
 
 # Datos
