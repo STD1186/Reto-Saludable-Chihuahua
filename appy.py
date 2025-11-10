@@ -291,34 +291,13 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         • Enfócate en salud a largo plazo, no solo peso
         • Disfruta del proceso y celebra tu consistencia
         """)
-if st.button("Ver Recomendaciones Personalizadas"):
-    
-    st.subheader(f"Plan para: {meta}")
-    
-    if meta == "Bajar peso":
-        st.info("""
-        **Plan de alimentación:**
-        • Déficit calórico de 300-500 kcal diarias
-        • Proteínas: 1.6-2.2g por kg de peso
-        • Reduce carbohidratos simples
-        • Aumenta fibra y verduras
-        
-        **Plan de ejercicio:**
-        • Cardio: 150-300 min/semana
-        • Entrenamiento de fuerza 3 veces/semana
-        • Actividad diaria: 10,000 pasos
-        
-        **Consejos adicionales:**
-        • Come lento y conscientemente
-        • Duerme 7-8 horas
-        • Controla porciones
-        """)
+
 # Platillos recomendados
 if st.button("Ver Platillos Personalizados"):
     
     st.subheader(f"🍽️ Platillos Recomendados para {meta}")
     
-    if meta == "💪 Ganar masa muscular":
+    if meta == "💪Ganar masa muscular":
         
         st.info("""
         **🍗 Pechuga de Pollo a la Plancha con Boniato y Brócoli**
@@ -352,7 +331,7 @@ if st.button("Ver Platillos Personalizados"):
         · Puntos Fuertes: Ideal para post-entreno o para quienes tienen poco apetito
         """)
         
-    elif meta == "📉 Bajar peso":
+    elif meta == "📉Bajar peso":
         
         st.info("""
         **🥗 Ensalada de Lentejas con Verduras y Salmón/Pollo**
