@@ -203,3 +203,8 @@ alimentos = {
     "Grasas saludables": ["Aguacate", "Nueces", "Aceite de oliva", "Semillas de chía", "Almendras", "Pescados azules", "Aceitunas"],
     "Frutas y Verduras": ["Espinacas", "Brócoli", "Manzana", "Zanahoria", "Fresas", "Tomate", "Col rizada", "Arándanos"]
 }
+
+if categoria_alimentos in alimentos:
+    cols = st.columns(2)
+    for i, alimento in enumerate(alimentos[categoria_alimentos]):
+        cols[i % 2].write(f"• {alimento}")
