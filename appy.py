@@ -96,7 +96,8 @@ if st.button("Ver Recomendaciones Personalizadas"):
         """)
 
 # Cálculo del IMC
-if st.button("Calculadora de Indice de masa corporal", type="primary", use_container_width=True):
+st.subheader("Calculadora demi Indice de Masa Corporal")
+if st.button("Calculadora de IMC", type="primary", use_container_width=True):
     # Cálculo del IMC
     altura_m = altura / 100
     imc = peso / (altura_m ** 2)
