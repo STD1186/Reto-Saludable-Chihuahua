@@ -7,7 +7,7 @@ st.title("⚖️ Reto Saludable Chihuahua")
 st.write("Calcula tu Índice de Masa Corporal y recibe consejos personalizados")
 
 # Datos
-st.subheader("Tus datos")
+st.subheader("📋 Tus datos")
 
 altura = st.slider("Altura (cm)", 0, 220, 170)
 peso = st.slider("Peso (kg)", 0, 220, 70)
@@ -25,7 +25,7 @@ actividad = st.selectbox(
 genero = st.radio("Género", ["Masculino", "Femenino", "Otro"])
 
 # Meta del usuario
-st.subheader("Tu Meta Personal")
+st.subheader("🏅 Tu Meta Personal")
 
 meta = st.radio(
     "¿Cuál es tu objetivo?",
