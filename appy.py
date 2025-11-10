@@ -154,7 +154,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         st.success("**🎯 Estrategia: Superávit Calórico Inteligente**")
         
         st.subheader("🍽️ Plan de Alimentación")
-        st.write("""
+        st.info("""
         **Distribución Diaria:**
         • Calorías: 300-500 kcal más que tu mantenimiento
         • Proteínas: 2.0-2.5g por kg de peso
@@ -175,7 +175,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         """)
         
         st.subheader("💪 Plan de Ejercicio")
-        st.write("""
+        st.info("""
         **Rutina Semanal:**
         • Fuerza: 4-5 días/semana
         • Cardio: 2-3 días/semana (moderado, 20-30 min)
@@ -189,7 +189,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         """)
         
         st.subheader("💡 Consejos Específicos")
-        st.write("""
+        st.info("""
         • Enfócate en la progresión, no solo en el dolor
         • Descansa 48 horas entre grupos musculares
         • Suplementa con proteína en polvo si es necesario
@@ -201,7 +201,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         st.success("**🎯 Estrategia: Déficit Calórico Controlado**")
         
         st.subheader("🍽️ Plan de Alimentación")
-        st.write("""
+        st.info("""
         **Distribución Diaria:**
         • Calorías: 300-500 kcal menos que tu mantenimiento
         • Proteínas: 1.8-2.2g por kg de peso
@@ -221,7 +221,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         """)
         
         st.subheader("💪 Plan de Ejercicio")
-        st.write("""
+        st.info("""
         **Rutina Semanal:**
         • Cardio: 4-5 días/semana (30-45 min)
         • Fuerza: 3-4 días/semana
@@ -235,7 +235,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         """)
         
         st.subheader("💡 Consejos Específicos")
-        st.write("""
+        st.info("""
         • Toma 2-3 litros de agua al día
         • Duerme 7-8 horas de calidad
         • Controla el estrés (meditación, yoga)
@@ -247,7 +247,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         st.success("**🎯 Estrategia: Equilibrio y Consistencia**")
         
         st.subheader("🍽️ Plan de Alimentación")
-        st.write("""
+        st.info("""
         **Distribución Diaria:**
         • Calorías: Mantenimiento (ni déficit ni superávit)
         • Proteínas: 1.2-1.6g por kg de peso
@@ -268,7 +268,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         """)
         
         st.subheader("💪 Plan de Ejercicio")
-        st.write("""
+        st.info("""
         **Rutina Semanal:**
         • Ejercicio mixto: 4-5 días/semana
         • Fuerza: 2-3 días/semana
@@ -283,7 +283,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         """)
         
         st.subheader("💡 Consejos Específicos")
-        st.write("""
+        st.info("""
         • Monitorea tu peso 1-2 veces por mes
         • Mantén rutinas consistentes
         • Escucha las señales de hambre y saciedad
