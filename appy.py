@@ -249,7 +249,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         st.subheader("🍽️ Plan de Alimentación")
         st.info("""
         **Distribución Diaria:**
-        • Calorías: Mantenimiento (ni déficit ni superávit)
+        • Calorías: Mantenimiento (ni déficit ni exceso)
         • Proteínas: 1.2-1.6g por kg de peso
         • Grasas: 25-35% del total calórico
         • Carbohidratos: 45-55% del total calórico
