@@ -140,7 +140,7 @@ if st.button("Calcular Mi Peso Ideal", type="primary", use_container_width=True)
         st.warning(f" **Recomendación:** Reduce {diferencia:.1f} kg para llegar al máximo ideal")
 
 # alimentos recomendados
-st.subheader("🥗 Alimentos recomendados")
+st.subheader("🥗 Alimentos recomendados para una dieta más balanceada")
 
 categoria_alimentos = st.radio(
     "Selecciona categoría:",
