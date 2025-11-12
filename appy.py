@@ -220,7 +220,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         • Descanso entre series: 60-90 segundos
         """)
         
-        st.subheader("💡 Consejos Específicos")
+        st.subheader("💡 Consejos ")
         st.info("""
         • Enfócate en la progresión, no solo en el dolor
         • Descansa 48 horas entre grupos musculares
@@ -266,7 +266,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         • Progresión en cargas
         """)
         
-        st.subheader("💡 Consejos Específicos")
+        st.subheader("💡 Consejos ")
         st.info("""
         • Toma 2-3 litros de agua al día
         • Duerme 7-8 horas de calidad
@@ -314,7 +314,7 @@ if st.button("📋 Ver Mi Plan Personalizado", key="plan_personalizado"):
         • Variedad para evitar aburrimiento
         """)
         
-        st.subheader("💡 Consejos Específicos")
+        st.subheader("💡 Consejos ")
         st.info("""
         • Monitorea tu peso 1-2 veces por mes
         • Mantén rutinas consistentes
